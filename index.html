@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,52 +9,203 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Rangemore Farms</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/tiny-slider.css">
+    <link rel="stylesheet" href="assets/fonts/lineicons/font-css/LineIcons.css">
     <link href="style.css" rel="stylesheet">
+    <title>Rangemore Farms</title>
 </head>
 
-<body>
-    <!-- header section -->
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <img src="img/full_logo.png" class="h-16 w-20 text-white p-2" />
-                <span class="ml-3 text-xl">Rangemore Farms</span>
-            </a>
-            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-gray-900">Products</a>
-                <a class="mr-5 hover:text-gray-900">About us</a>
-                <a class="mr-5 hover:text-gray-900">Sign in</a>
-            </nav>
-            <button
-                class="inline-flex items-center bg-emerald-600 border-0 py-1 px-3 focus:outline-none hover:bg-emerald-200 rounded text-white mt-4 md:mt-0">Sign
-                up
-                </svg>
-            </button>
-        </div>
-    </header>
+<body class="bg-gray-100">
 
-    <!-- Hero Section -->
-    <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
-                src="https://dummyimage.com/720x600">
-            <div class="text-center lg:w-2/3 w-full">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth tattooed
-                    vexillologist</h1>
-                <p class="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing
-                    tousled. Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami
-                    snackwave tilde chillwave ugh. Pour-over meditation PBR&amp;B pickled ennui celiac mlkshk freegan
-                    photo booth af fingerstache pitchfork.</p>
-                <div class="flex justify-center">
-                    <button
-                        class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-100 rounded text-lg">Buy</button>
-                    <button
-                        class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+    <header>
+        <div class="mx-auto flex max-w-7xl items-center justify-between p-4 sticky fixed">
+            <div class="flex items-center space-x-2">
+                <button class="flex appearance-none p-1 text-gray-500 md:hidden">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256">
+                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                    </svg>
+                </button>
+                <div class="flex shrink-0 flex-row items-center justify-center">
+                    <a href="#">
+                        <img src="img/full_logo.png" class="h-[5.438rem] w-[2.875] text-white p-2" />
+                    </a>
+                    Rangemore Farms
+                </div>
+                <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse"
+                    data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                </button>
+
+            </div>
+
+            <nav class="flex  hidden lg:block items-center space-x-1 text-sm font-medium text-gray-800">
+                <a class="page-scroll" href="#products"
+                    class="rounded px-3 py-2 text-green-800 transition hover:bg-emerald-600 hover:text-white">Products</a>
+                <a href="#" class="rounded px-3 py-2 transition hover:bg-emerald-600 hover:text-white">Contact Us</a>
+                <a href="#"
+                    class="hidden bg-gray-200 rounded px-3 py-2 transition hover:bg-gray-100 sm:inline hover:text-white">Sign
+                    In</a>
+                <a href="#"
+                    class="rounded bg-rose-600 px-3 py-2 text-white transition hover:bg-rose-700 hover:text-white">Sign
+                    Up</a>
+            </nav>
+        </div>
+    </header>
+    <div class="min-h-screen flex flex-col">
+        <main class="flex-grow">
+            <section class="flex w-full h-[24rem] flex-col items-center justify-center lg:-mt-8 -mt-4">
+                <img src="img/photo-an-irrigation-system.jpg" class="object-cover w-full h-full" alt="colorful leafs" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center items-center">
+                    <div
+                        class="h-[18rem] w-[18rem] lg:-mt-32 sm:-mt-32 -mt-48 rounded-full bg-emerald-600 opacity-70 flex flex-col items-center justify-center p-4">
+                        <p class="text-white text-center leading-tight text-2xl">Taste the Nature's Goodness</p>
+                        <p class="text-white mt-2 text-center leading-tight text-xl">Freshly Grown,Organic, Pure Health
+                        </p>
+                        <a href="#"
+                            class="hidden rounded px-3 py-2 transition hover:bg-gray-100 sm:inline hover:text-black">Order
+                            Now</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div
+                    class="flex flex-col container mx-auto px-5 lg:py-12 py-24 items-center justify-center flex-col lg:w-2/3 w-full">
+                    <h1 class="title-font sm:text-xl text-2xl mb-4 font-medium text-gray-900">Now Available for delivery
+                        within Zimbabwe</h1>
+                    <p class="mb-8 leading-relaxed">Regular deliveries and pick-ups are available in your area</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex rounded-full text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Check
+                            Delivery Areas</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="products_are pt-120" id="products">
+                <div class="flex flex-col bg-gray-200 w-full px-3 py-3  ">
+                    <div class="flex items-center mx-16">
+                        <div class="border-t border-1 border-teal-800 flex-grow"></div>
+                        <div class="mx-5">About us</div>
+                        <div class="border-t border-1 border-teal-800 flex-grow"></div>
+                    </div>
+
+                    <div class="flex items-center mx-16 mb-8 mt-8 gap-2">
+                        <div class="w-2/4">
+                          <img class="rounded h-82" src="img/potatoes-being-transported.jpg" alt="Your image alt text">
+                        </div>
+                        <div class="w-2/4 flex flex-col items-center">
+
+                          <h2 class="text-center">Farming for Health And Nourishing the Earth </h2>
+                          <p class="mt-10 text-center">We know that food grown on healthy land with healthy farming is healthy food. We grow organic food that's good for you and the environment.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mx-16 mb-8 mt-8 gap-2">
+                        <div class="w-2/4 flex flex-col items-center">
+
+                          <h2 class="text-center">A Family Tradition</h2>
+                          <p class="mt-10 text-center">At Rangemore Farms, farming is more than a job - it's a way of life that's been passed down through generations. From our family to yours, we're honored to grow the freshest, most delicious food that nourishes and delights. Thank you for joining us in carrying on this cherished tradition.</p>
+                        </div>
+                        <div class="w-2/4">
+                            <img class="rounded h-82" src="img/tractor-old.jpg" alt="Your image alt text">
+                          </div>
+                    </div>
+                </div>
+                
+
+
+            </section>
+
+            <section class="products_are pt-120" id="products">
+
+
+            </section>
+
+        </main>
+        <!-- footer section -->
+        <footer class="text-gray-600 body-font w-full">
+            <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <img src="img/log.png" class="w-[3rem] text-white p-2 rounded-full" />
+                    <span class="ml-3 text-md">Rangemore Farms</span>
+                </a>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                    <a class="text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+
+    <!--====== Tiny Slider js ======-->
+    <script src="assets/js/tiny-slider.js"></script>
+
+    <!--====== Wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+
 
 </body>
 
