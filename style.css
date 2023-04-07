@@ -681,6 +681,10 @@ video {
   z-index: 20;
 }
 
+.order-first {
+  order: -9999;
+}
+
 .float-right {
   float: right;
 }
@@ -3515,6 +3519,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:order-none {
+    order: 0;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3561,6 +3569,10 @@ video {
 
   .md\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .md\:w-2\/4 {
+    width: 50%;
   }
 
   .md\:flex-row {
