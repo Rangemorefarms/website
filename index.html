@@ -30,7 +30,7 @@
                 <a href="#">
                     <img src="img/full_logo.png" class="h-[5.438rem] w-[2.875] p-2" />
                 </a>
-                Rangemore Farms
+                <p class="text-center">Rangemore <span class="hidden md:inline">Farms</span></p>
             </div>
 
             <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  
@@ -55,7 +55,8 @@
                 </ul>
             </div>
             <div class="flex items-center gap-6">
-                <button class="bg-teal-600 text-white px-5 py-2 rounded-full duration-500 hover:bg-teal-400">Sign
+                <button
+                    class="bg-teal-600 lg:text-md text-sm px-2 py-1 text-white md:px-5 md:py-2 rounded-full duration-500 hover:bg-teal-400">Sign
                     in</button>
                 <ion-icon id="iconMenu" onclick="onToggleMenu(this)" name="menu"
                     class="text-3xl cursor-pointer md:hidden"></ion-icon>
@@ -178,11 +179,15 @@
             e.name = e.name === 'menu' ? 'close' : 'menu'
             navLinks.classList.toggle('top-[12%]')
             const orderMenuEl = document.getElementById("orderMenuId")
+            const headerSubNameEl = document.getElementById("headerSubName")
             if (e.name === 'close') {
                 orderMenuEl.classList.add("hidden")
+                headerSubNameEl.classList.add("hidden")
             } else {
                 orderMenuEl.classList.remove("hidden")
                 orderMenuEl.classList.add("visible")
+                headerSubNameEl.classList.remove("hidden")
+                headerSubNameEl.classList.add("visible")
             }
         }
 
