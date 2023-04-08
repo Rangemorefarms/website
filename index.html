@@ -179,27 +179,28 @@
             e.name = e.name === 'menu' ? 'close' : 'menu'
             navLinks.classList.toggle('top-[12%]')
             const orderMenuEl = document.getElementById("orderMenuId")
-            const headerSubNameEl = document.getElementById("headerSubName")
             if (e.name === 'close') {
                 orderMenuEl.classList.add("hidden")
-                headerSubNameEl.classList.add("hidden")
             } else {
                 orderMenuEl.classList.remove("hidden")
                 orderMenuEl.classList.add("visible")
-                headerSubNameEl.classList.remove("hidden")
-                headerSubNameEl.classList.add("visible")
             }
         }
 
         function closeMenuButton() {
             const iconMenuEl = document.getElementById("iconMenu")
             const navLinks = document.querySelector('.nav-links')
+            const orderMenuEl = document.getElementById("orderMenuId")
+
             if (iconMenuEl.name === 'close') {
                 iconMenuEl.name = iconMenuEl.name === 'menu' ? 'close' : 'menu'
                 navLinks.classList.toggle('top-[12%]')
-
+                orderMenuEl.classList.remove("hidden")
+                orderMenuEl.classList.add("visible")
+            } else {
+                orderMenuEl.classList.remove("hidden")
+                orderMenuEl.classList.add("visible")
             }
-
         }
     </script>
 
