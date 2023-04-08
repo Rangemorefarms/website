@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -13,90 +13,67 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/tiny-slider.css">
-    <link rel="stylesheet" href="assets/fonts/lineicons/font-css/LineIcons.css">
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Rangemore Farms</title>
 </head>
 
-<body class="bg-gray-100">
-
-    <!--====== PRELOADER PART START ======-->
-
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--====== PRELOADER PART ENDS ======-->
-    <header>
-        <div class="mx-auto flex max-w-7xl items-center justify-between p-4 sticky fixed">
-            <div class="flex items-center space-x-2">
-                <button class="flex appearance-none p-1 text-gray-500 md:hidden">
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256">
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                        <line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="24"></line>
-                        <line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                    </svg>
-                </button>
-                <div class="flex shrink-0 flex-row items-center justify-center">
-                    <a href="#">
-                        <img src="img/full_logo.png" class="h-[5.438rem] w-[2.875] text-white p-2" />
-                    </a>
-                    Rangemore Farms
-                </div>
-                <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse"
-                    data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="toggler-icon"></span>
-                    <span class="toggler-icon"></span>
-                    <span class="toggler-icon"></span>
-                </button>
-
+<body class="bg-gray-100 min-h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div class="flex shrink-0 flex-row items-center justify-center">
+                <a href="#">
+                    <img src="img/full_logo.png" class="h-[5.438rem] w-[2.875] p-2" />
+                </a>
+                Rangemore Farms
             </div>
 
-            <nav class="flex  hidden lg:block items-center space-x-1 text-sm font-medium text-gray-800">
-                <a class="page-scroll" href="#products"
-                    class="rounded px-3 py-2 text-green-800 transition hover:bg-emerald-600 hover:text-white">Products</a>
-                <a href="#" class="rounded px-3 py-2 transition hover:bg-emerald-600 hover:text-white">Contact Us</a>
-                <a href="#"
-                    class="hidden bg-gray-200 rounded px-3 py-2 transition hover:bg-gray-100 sm:inline hover:text-white">Sign
-                    In</a>
-                <a href="#"
-                    class="rounded bg-rose-600 px-3 py-2 text-white transition hover:bg-rose-700 hover:text-white">Sign
-                    Up</a>
-            </nav>
-        </div>
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  
+                      w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li h-16 w-16>
+                        <a class="rounded px-3 py-3 transition hover:bg-teal-400 sm:inline hover:text-white"
+                            href="#products">Products</a>
+                    </li>
+                    <li>
+                        <a class="rounded px-3 py-3 transition hover:bg-teal-400 sm:inline hover:text-white"
+                            onclick="closeMenuButton();" href="#aboutus">About Us</a>
+                    </li>
+                    <li>
+                        <a class="rounded px-3 py-3 transition hover:bg-teal-400 sm:inline hover:text-white"
+                            href="#contactus">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="rounded px-3 py-3 transition hover:bg-teal-400 sm:inline hover:text-white"
+                            href="#orders">Orders</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="bg-teal-600 text-white px-5 py-2 rounded-full duration-500 hover:bg-teal-400">Sign
+                    in</button>
+                <ion-icon id="iconMenu" onclick="onToggleMenu(this)" name="menu"
+                    class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
     </header>
+
     <div class="min-h-screen flex flex-col">
         <main class="flex-grow">
-            <section class="flex w-full h-[24rem] flex-col items-center justify-center lg:-mt-8 -mt-4">
+            <section class="flex w-full h-[24rem] flex-col items-center justify-center ">
                 <img src="img/photo-an-irrigation-system.jpg" class="object-cover w-full h-full" alt="colorful leafs" />
-                <div class="absolute inset-0 flex flex-col items-center justify-center items-center">
+                <div class="absolute flex flex-col items-center justify-center items-center" id="orderMenuId">
                     <div
-                        class="h-[18rem] w-[18rem] lg:-mt-32 sm:-mt-32 -mt-48 rounded-full bg-emerald-600 opacity-70 flex flex-col items-center justify-center p-4">
+                        class="h-[18rem] w-[18rem] lg:-mt-8 sm:-mt-8 -mt-8 rounded-full bg-emerald-600 opacity-70 flex flex-col items-center justify-center p-4">
                         <p class="text-white text-center leading-tight text-2xl">Taste the Nature's Goodness</p>
                         <p class="text-white mt-2 text-center leading-tight text-xl">Freshly Grown,Organic, Pure Health
                         </p>
                         <a href="#"
-                            class="hidden rounded px-3 py-2 transition hover:bg-gray-100 sm:inline hover:text-black">Order
+                            class=" rounded px-3 py-3 transition hover:bg-gray-100 sm:inline hover:text-black">Order
                             Now</a>
                     </div>
                 </div>
@@ -115,7 +92,7 @@
                 </div>
             </section>
 
-            <section class="products_are pt-120" id="products">
+            <section class="aboutus_area pt-120" id="aboutus">
                 <div class="flex flex-col bg-gray-200 w-full px-3 py-3  ">
                     <div class="flex items-center mx-16">
                         <div class="border-t border-1 border-teal-800 flex-grow"></div>
@@ -141,7 +118,7 @@
                             <h2 class="text-center">A Family Tradition</h2>
                             <p class="mt-10 text-center">Our family grew up on the land of Rangemore Farms. We are proud
                                 to grow the food that feeds your families. Thank you for supporting this tradition.
-                                How can you change this theme and spicy it a bit </p>
+                            </p>
                         </div>
 
                         <div class="shrink-0 w-full">
@@ -149,11 +126,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="products_are pt-120" id="products">
-
-
             </section>
 
         </main>
@@ -200,17 +172,31 @@
         </footer>
     </div>
 
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[12%]')
+            const orderMenuEl = document.getElementById("orderMenuId")
+            if (e.name === 'close') {
+                orderMenuEl.classList.add("hidden")
+            } else {
+                orderMenuEl.classList.remove("hidden")
+                orderMenuEl.classList.add("visible")
+            }
+        }
 
-    <!--====== Tiny Slider js ======-->
-    <script src="assets/js/tiny-slider.js"></script>
+        function closeMenuButton() {
+            const iconMenuEl = document.getElementById("iconMenu")
+            const navLinks = document.querySelector('.nav-links')
+            if (iconMenuEl.name === 'close') {
+                iconMenuEl.name = iconMenuEl.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[12%]')
 
-    <!--====== Wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
+            }
 
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
-
-
+        }
+    </script>
 
 </body>
 
